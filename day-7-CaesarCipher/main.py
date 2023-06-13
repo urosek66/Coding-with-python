@@ -1,23 +1,28 @@
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+from art import logo
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
+            'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
+            'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 # define function caesar()
+
+
 def caesar(start_text, shift_amount, cipher_direction):
-  end_text = ""
-  if cipher_direction == "decode":
-    shift_amount *= -1
-  for char in start_text:
+    end_text = ""
+    if cipher_direction == "decode":
+        shift_amount *= -1
+    for char in start_text:
 
-      if char in alphabet:   
-        position = alphabet.index(char)
-        new_position = position + shift_amount
-        end_text += alphabet[new_position]
-      else:
-          end_text += char
+        if char in alphabet:
+            position = alphabet.index(char)
+            new_position = position + shift_amount
+            end_text += alphabet[new_position]
+        else:
+            end_text += char
     
-  print(f"Here's the {cipher_direction}d result: {end_text}")
+    print(f"Here's the {cipher_direction}d result: {end_text}")
 
-#import and show logo
-from art import logo
+
+# import and show logo
 print(logo)
 
 # define while loop to play game
